@@ -1,6 +1,6 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider, Route, Navigate } from 'react-router-dom';
-
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import Layout from './layout';
 const router = createBrowserRouter([
   {
     path: '/about',
@@ -33,10 +33,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <RouterProvider router={router}>
-      <BrowserRouter>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </BrowserRouter>
     </RouterProvider>
   );
 }
